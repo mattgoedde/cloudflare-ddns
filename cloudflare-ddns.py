@@ -171,6 +171,8 @@ def commitRecord(ip):
                         "zones/" + option['zone_id'] +
                         "/dns_records/" + identifier,
                         "PUT", option, {}, record)
+                else:
+                    print("👍🏻 No changes needed")
             else:
                 print("➕ Adding new record " + str(record))
                 response = cf_api(
